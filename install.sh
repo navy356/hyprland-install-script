@@ -158,11 +158,11 @@ if gum confirm "Do you need development setup?" ;then
   ssh-keygen
 
   # java
-  echo -e "${GREEN}"
-  figlet "Java"
-  echo -e "${NONE}"
-  sudo pacman -Sy jre21-openjdk jdk21-openjdk maven --noconfirm
-  yay -S google-java-format --noconfirm
+  #echo -e "${GREEN}"
+  #figlet "Java"
+  #echo -e "${NONE}"
+  #sudo pacman -Sy jre21-openjdk jdk21-openjdk maven --noconfirm
+  #yay -S google-java-format --noconfirm
 
   # python
   echo -e "${GREEN}"
@@ -171,7 +171,7 @@ if gum confirm "Do you need development setup?" ;then
   sudo pacman -Sy python-pip --noconfirm
 
   # jetbrains
-  yay -S jetbrains-toolbox --noconfirm
+  #yay -S jetbrains-toolbox --noconfirm
 
   # node
   echo -e "${GREEN}"
@@ -198,7 +198,7 @@ if gum confirm "Do you need development setup?" ;then
   yay -S visual-studio-code-bin --noconfirm
 
   # rest client
-  yay -S bruno-bin --noconfirm
+  #yay -S bruno-bin --noconfirm
 
   # neovim
   echo -e "${GREEN}"
@@ -219,12 +219,13 @@ fi
 echo -e "${GREEN}"
 figlet "GUI Apps"
 echo -e "${NONE}"
-sudo pacman -Sy okular feh gwenview mpv qbittorrent bitwarden qalculate-gtk veracrypt --noconfirm
-yay -S onlyoffice-bin brave-bin librewolf-bin zen-browser-bin ventoy-bin webcord --noconfirm
+#sudo pacman -Sy okular feh gwenview mpv qbittorrent bitwarden qalculate-gtk veracrypt --noconfirm
+sudo pacman -Sy feh --noconfirm
+#yay -S onlyoffice-bin brave-bin librewolf-bin zen-browser-bin ventoy-bin webcord --noconfirm
 
 # set default browser
-unset BROWSER
-xdg-settings set default-web-browser zen-browser.desktop
+#unset BROWSER
+#xdg-settings set default-web-browser zen-browser.desktop
 
 # terminal utils
 echo -e "${GREEN}"
@@ -319,12 +320,12 @@ sudo systemctl enable bluetooth
 sudo systemctl enable fstrim.timer
 
 # swapfile
-echo -e "${GREEN}"
-figlet "Swapfile"
-echo -e "${NONE}"
-sudo mkswap -U clear --size 8G --file /swapfile
-sudo swapon /swapfile
-echo "/swapfile				  swap		 swap	 defaults   0 0" | sudo tee -a /etc/fstab
+#echo -e "${GREEN}"
+#figlet "Swapfile"
+#echo -e "${NONE}"
+#sudo mkswap -U clear --size 8G --file /swapfile
+#sudo swapon /swapfile
+#echo "/swapfile				  swap		 swap	 defaults   0 0" | sudo tee -a /etc/fstab
 
 
 # -----------------------------------------------------
